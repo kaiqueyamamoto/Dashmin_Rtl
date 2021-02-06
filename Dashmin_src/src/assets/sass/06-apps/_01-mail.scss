@@ -1,0 +1,368 @@
+/* ************************
+   06.1: Mail 
+   ********************* */
+
+   .mail-header {
+      .dropdown-button {
+         .menu-icon {
+            height: 22px;
+         }
+      }
+   }
+
+   /* Mail Header */
+   .mail-header-left {
+      > div, > button {
+         margin-right: 20px;
+         line-height: 1;
+      }
+      > button {
+         background-color: transparent;
+         padding: 0;
+      }
+      .custom-checkbox {
+         margin-top: 2px;
+      }
+      .dropdown-button {
+         margin-left: 20px;
+      }
+      .star {
+         position: relative;
+         top: -1px;
+      }
+   }
+   .mail-header-right {
+      @include mobileMd {
+         width: 100%;
+      }
+      .search-form {
+         width: 100%;
+         max-width: 740px;
+         .theme-input-group {
+            height: 50px;
+            input {
+               height: 50px;
+            }
+            button {
+               padding: 5px 15px;
+            }
+         }
+      }
+   }
+
+   /* Message List Item */
+   .mail-list-item,
+   .main-mail {
+      padding: 15px 20px;
+      @include mobileMd {
+         padding: 15px;
+      }
+      @extend .white-bg;
+      @extend .trans3;
+      position: relative;
+      &:not(:last-child) {
+         &:after {
+            width: calc(100% - 40px);
+            left: 20px;
+            bottom: 0;
+            height: 1px;
+            background-color: #F5F5F5;
+            position: absolute;
+            content: "";
+         }
+      }
+      &.selected {
+         background-color: transparent;
+         &:after {
+            display: none;
+         }
+      }
+
+      .mail-text {
+         margin-left: 10px;
+         margin-right: 20px;
+         @include mobileMd {
+            margin-right: 0;
+         }
+         width: 100%;
+         .msg {
+            @extend .text_color;
+            @extend .trans3;
+         }
+      }
+      
+      .avatar {
+         margin-right: 20px;
+         @include mobileMd {
+            margin-right: 14px;
+         }
+         img {
+            @extend .radius;
+            @include mobileMd {
+               width: 40px;
+               min-width: 40px;
+               height: 40px;
+            }
+         }
+      }
+      &:hover {
+         .mail-text {
+            .msg {
+               @extend .text_color;
+               @extend .bold;
+            }
+         }
+      }
+   }
+
+   .main-mail {
+      padding: 30px;
+      @include mobileSm {
+         padding: 20px 15px;
+      }
+   }
+
+   .main-mail .avatar {
+      width: 60px;
+      min-width: 60px;
+      height: 60px;
+      margin-right: 20px;
+      @include mobileMd {
+         margin-right: 0;
+      }
+
+      img {
+         @include mobileMd {
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+         }
+      }
+   }
+
+   .mail-list-item-right,
+   .mail-right {
+      @include mobileMd {
+         margin-left: 102px;
+         margin-top: 5px;
+      }
+      > div, > button {
+         line-height: 1;
+         &:not(:last-child) {
+            margin-right: 15px;
+            @include mobileMd {
+               margin-right: 10px;
+            }
+         }
+      }
+      .status-btn {
+         min-width: 60px;
+         padding: 4px;
+      }
+      .delete_mail {
+         background-color: transparent;
+         padding: 0;
+      }
+      .mail-date,
+      .star {
+         position: relative;
+         top: -1px;
+      }
+   }
+
+   .mail-body {
+      line-height: 1.73;
+   }
+
+   /* Mail Compose */
+   .compose-wrap {
+      @extend .box-shadow;
+      .replay-cc-bcc {
+         padding: 20px 30px;
+         background-color: transparent;
+         @include mobileMd {
+            padding: 15px;
+         }
+      }
+      .mail-compose {
+         .form-group {
+            label {
+               margin-right: 10px;
+               text-align: right;
+            }
+            label, .cc-btns {
+               flex-basis: 80px;
+               @include mobileLg {
+                  flex-basis: 30px;
+               }
+            }
+            .close-btn {
+               flex-basis: 70px;
+               @include mobileLg {
+                  flex-basis: 20px;
+               }
+            }
+         }
+      }
+   }
+   .mail-compose, .modal-body {
+      .form-group {
+         label, .cc-btns {
+            flex-basis: 100px;
+            @include mobileLg {
+               flex-basis: 30px;
+            }
+         }
+         .cc-btns {
+            margin-left: 10px;
+            @include mobileLg {
+               margin-left: 0;
+               margin-top: 10px;
+            }
+            .cc {
+               @extend .c3;
+               background-color: #DBF7E8;
+               @extend .radius;
+               padding: 9px;
+            }
+            .cc-btn {
+               cursor: pointer;
+               @extend .text_color;
+               @extend .trans3;
+               &:hover {
+                  @extend .c3;
+               }
+            }
+         }
+         .close-btn {
+            margin-left: 20px;
+            flex-basis: 90px;
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            @include mobileLg {
+               flex-basis: 20px;
+               margin-left: 0;
+               margin-top: 10px;
+            }
+            svg {
+               cursor: pointer;
+               position: relative;
+               top: -2px;
+            }
+         }
+
+         .input-wrap {
+            background-color: #fff;
+            @extend .radius-50;
+            padding: 0px 10px;
+            @include mobileLg {
+               width: 100%;
+               border-radius: 0;
+               padding: 10px 5px;
+            }
+            span {
+               background-color: #E9E7FF;
+               @extend .c1;
+               @extend .radius-50;
+               padding: 2px 10px;
+               margin: 2px;
+               height: 25px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               min-width: max-content;
+               &:not(:first-child) {
+                  margin-left: 5px;
+               }
+
+               svg {
+                  width: 8px;
+                  height: 8px;
+                  margin-left: 5px;
+                  cursor: pointer;
+               }
+
+               @include mobileSm {
+                  font-size: 12px;
+                  padding: 0 8px;
+                  height: 20px;
+               }
+            }
+            > div {
+               flex: 1;
+               //flex-basis: auto;
+               &.dropdown-button {
+                  flex: 0;
+               }
+            }
+            input {
+               @extend .border-0;
+               @extend .c1;
+               padding: 0 15px;
+               min-width: 100px;
+            }
+         }
+      }
+   }
+
+
+   /* Summernote Editor */
+   .summernote {
+      background-color: #fff;
+      .note-editor-bottom {
+         padding: 20px 30px;
+         @include mobileMd {
+            padding: 15px 20px;
+         }
+         .delete {
+            position: relative;
+            top: -1px;
+         }
+      }
+      .note-frame {
+         .note-placeholder {
+            padding: 20px 30px;
+            @include mobileMd {
+               padding: 15px 20px;
+            }
+         }
+         .note-editing-area {
+            .note-editable {
+               padding: 20px 30px;
+               @include mobileMd {
+                  padding: 15px 20px;
+               }
+            }
+         }
+         .note-toolbar {
+            border-bottom: 1px solid #f5f5f5;
+            background-color: #fff;
+            padding: 5px 22px;
+            @include mobileMd {
+               padding: 5px 12px;
+            }
+         }
+         .note-btn-group {
+            margin-top: 0;
+            button {
+               box-shadow: none !important;
+               padding-top: 9px;
+               padding-bottom: 9px;
+               background-color: transparent;
+               border-radius: 0;
+               &:after {
+                  border-top-color: #444444;
+               }
+               i, span {
+                  color: #444444;
+               }
+            }
+         }
+      }
+   }
+   .note-editor.note-frame .note-toolbar > .note-btn-group .note-btn:hover,
+   .note-editor.note-frame .note-toolbar > .note-btn-group .note-btn.active,
+   .note-editor.note-frame .note-toolbar > .note-btn-group .show > .note-btn {
+      background-color: #f5f5f5;
+   }

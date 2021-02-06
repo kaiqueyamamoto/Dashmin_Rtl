@@ -1,0 +1,47 @@
+/* ************************
+   02.3: Pagination
+   ********************* */
+
+  .pagination {
+    ul {
+      li {
+        @extend .c1;
+        @extend .bold;
+        @extend .font-14;
+        &.current {
+          width: 30px;
+          height: 30px;
+          background-color: #E9E7FF;
+          @extend .radius;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        a {
+          padding: 8px;
+        }
+      }
+    }
+    > p {
+      color: #aeaeae;
+    }
+
+    &.style--two {
+		ul {
+			margin: 0;
+			li {
+				svg {
+					width: 10px;
+					height: 15px;
+					path {
+						stroke: #E9E7FF;
+						@extend .trans3;
+					}
+				}
+				a.current svg path {
+					stroke: #8280FD;
+				}
+			}
+		}
+    }
+  }

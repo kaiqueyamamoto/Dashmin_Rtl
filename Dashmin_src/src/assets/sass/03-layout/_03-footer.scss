@@ -1,0 +1,42 @@
+/* ************************
+   03.3: Footer
+   ********************* */
+   .footer {
+      height: 70px;
+      //background-color: #CCC;
+      padding-left: 290px;
+      display: flex;
+      align-items: center;
+      @extend .trans3;
+      font-size: 14px;
+      line-height: 1;
+      background-color: #f0f0f0;
+      @include tab {
+         padding: 0 15px;
+         justify-content: center;
+      }
+
+      &.style--two {
+         padding: 0 15px;
+         justify-content: center;
+      }
+   }
+   body {
+      &.sidebar-folded {
+         .footer {
+            padding-left: 90px;
+            @include tab {
+               padding: 0 15px;
+            }
+         }
+         
+         &.open-sidebar-folded {
+            .footer {
+               padding-left: 290px;
+               @include tab {
+                  padding: 0 15px;
+               }
+            }
+         }
+      }
+   }

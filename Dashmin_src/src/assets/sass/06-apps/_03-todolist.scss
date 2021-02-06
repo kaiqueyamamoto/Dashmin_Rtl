@@ -1,0 +1,253 @@
+/* ************************
+   06.3: Todolist 
+   ********************* */
+.todo-list {
+    .single-row {
+        padding: 0 1.25rem;
+        @extend .trans3;
+        position: relative;
+        &:hover {
+            @extend .box-shadow;
+            border-color: transparent !important;
+        }
+        &.border-bottom {
+            &.change-border-color {
+                border-color: transparent !important;
+                @extend .trans3;
+            }
+        }
+        &:after {
+            @extend .ba;
+            top: 15%;
+            width: 0;
+            height: 70%;
+            @extend .radius-5;
+        }
+        &.level-urgent {
+            &:after {
+                background-color: #FFB959;
+                width: 3px;
+            }
+            .label-text {
+                color: #FFB959;
+            }
+        }
+        &.level-important {
+            &:after {
+                background-color: #FC7383;
+                width: 3px;
+            }
+            .label-text {
+                color: #FC7383;
+            }
+        }
+        &.level-not_important {
+            &:after {
+                background-color: #67CF94;
+                width: 3px;
+            }
+            .label-text {
+                color: #67CF94;
+            }
+        }
+        &.level-not_urgent {
+            &:after {
+                background-color: #C491FF;
+                width: 3px;
+            }
+            .label-text {
+                color: #C491FF;
+            }
+        }
+        &.level-average {
+            &:after {
+                background-color: #09D1DE;
+                width: 3px;
+            }
+            .label-text {
+                color: #09D1DE;
+            }
+        }
+    }
+    .todo-title {
+        line-height: 1.294;
+    }
+    .todo-text {
+        padding-right: 10px;
+        display: block;
+        .card-text {
+        @extend .black;
+        @extend .trans3;
+        }
+        &.line-through {
+            .card-text {
+                text-decoration: line-through;
+                color: #aeaeae;
+            }
+        }
+    }
+}
+
+//Assign To
+.assign_to {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    .assign-content {
+        position: absolute;
+        right: 10px;
+        top: 2px;
+        height: 20px;
+        background-color: #FFF4E6;
+        z-index: -1;
+        @extend .radius-50;
+        @extend .bold;
+
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        @extend .trans3;
+    }
+    .todo-text {
+        background-color: red;
+    }
+    .assign-avatar {
+        width: 30px;
+        height: 30px;
+        @extend .radius;
+        position: absolute;
+        left: -10px;
+        top: -5px;
+    }
+    &:hover {
+        .assign-content {
+            width: max-content;
+            padding: 1px 26px;
+            overflow: visible;
+            opacity: 1;
+        }
+    }
+}
+.assign-tag {
+    position: relative;
+    display: block;
+    height: 20px;
+    background-color: #DBF7E8;
+    @extend .c3;
+    @extend .radius-50;
+    @extend .trans3;
+    padding-left: 40px;
+    padding-right: 10px;
+    margin-left: 10px;
+    .tag-text {
+        padding: 1px;
+        @extend .bold;
+    }
+    .assign-avatar {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        @extend .radius;
+        left: 0;
+        top: -5px;
+    }
+    &.front-end {
+        background-color: #DBF7E8;
+        @extend .c3;
+    }
+    &.back-end {
+        background-color: #FFF4E6;
+        color: #FFB959;
+    }
+}
+
+//Assign Button
+.assign-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $c4;
+    @extend .radius;
+    cursor: pointer;
+    svg {
+        line {
+            stroke: $text_color;
+            @extend .trans3;
+        }
+    }
+    &:hover {
+        svg {
+            line {
+                stroke: $c1;
+            }
+        }
+    }
+}
+
+/* Todo Priority */
+.priority {
+    .assign-menu {
+        color: #67CF94;
+        padding: 6px 15px;
+        background-color: #DBF7E8;
+        @extend .radius-50;
+    }
+}
+
+/* Add New Task */
+.add-new_task {
+    .add-new-title {
+        margin-bottom: 35px;
+        &.style--two {
+            margin-bottom: 27px;
+            line-height: 1.2;
+        }
+    }
+    .label-text {
+        @extend .bold;
+        font-size: 14px;
+        @extend .black;
+        margin-bottom: 13px;
+    }
+    .todo_actions {
+        margin-bottom: 18px;
+        > div {
+            margin-bottom: 17px;
+            &:not(:last-child) {
+                margin-right: 60px;
+                @include customMq(320, 440) {
+                    margin-right: 0;
+                }
+            }
+        }
+        .todo_assaign {
+            @include mobileXs {
+                flex-wrap: wrap;
+                align-items: flex-start !important;
+                .assign-tag {
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.task-details {
+    @extend .add-new_task;
+    .show-date {
+        display: inline-block;
+        @extend .radius-50;
+        padding: 2px 15px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        background-color: #FAFAFA;
+        svg {
+            margin-right: 10px;
+        }
+    }
+}

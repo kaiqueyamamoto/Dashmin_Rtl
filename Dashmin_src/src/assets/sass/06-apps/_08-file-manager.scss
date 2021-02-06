@@ -1,0 +1,224 @@
+/* ************************
+   06.8: File Manager 
+   ********************* */
+   .file-header {
+       .search-form {
+           max-width: 640px;
+       }
+       .custom-checkbox {
+           top: 0;
+           transform: none;
+       }
+   }
+   .aside {
+       @extend .tasks_aside;
+   }
+
+   .file {
+       margin-bottom: 20px;
+       position: relative;
+       .dropdown-button {
+           visibility: hidden;
+           opacity: 0;
+           @extend .trans3;
+       }
+       .img {
+           min-width: 40px;
+       }
+       &:hover, &.active {
+           .dropdown-button {
+                visibility: visible;
+                opacity: 1;
+           }
+       }
+       .custom-checkbox {
+           width: 18px;
+           height: 18px;
+           top: -10px;
+           left: -10px;
+           transform: none;
+       }
+   }
+
+   /* Share Modal */
+    #shareModal {
+        .modal-dialog {
+            max-width: 580px;
+        }
+
+        .modal-content {
+            @extend .border-0;
+            @extend .box-shadow;
+            border-radius: 3px;
+            padding: 30px;
+            @include mobileMd {
+                padding: 15px 10px;
+            }
+
+            .modal-close {
+                position: absolute;
+                cursor: pointer;
+                display: flex;
+                right: 12px;
+                top: 16px;
+                svg {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            .modal-header {
+                padding-bottom: 13px;
+                margin-bottom: 10px;
+                border-color: #e8e8e8;
+            }
+            .modal-body {
+                .form-group {
+                    .input-wrap {
+                        background-color: #f0f0f0;
+                        padding: 5px;
+                        @extend .radius-50;
+
+                        .theme-input-style {
+                            height: 25px;
+                            @extend .text_color;
+                            background-color: transparent;
+                            border-radius: 3px;
+                            padding: 5px 10px;
+                            @extend .font-14;
+                        }
+
+                        .menu-icon {
+                            span {
+                                padding: 0;
+                                @extend .c4-bg;
+                                margin: 0;
+                                height: 4px;
+                                &:not(:last-child) {
+                                    margin-bottom: 3px;
+                                }
+                            }
+                        }
+                    }
+                    &.comment {
+                        margin-bottom: 25px;
+                        display: none;
+                    }
+                }
+                .form-group.comment {
+                    textarea.theme-input-style {
+                        height: 70px;
+                    }
+                }
+            }
+        }
+
+        &.style--two {
+            @include mobileMd {
+                width: 100%;
+            }
+            .modal-content {
+                max-width: 585px;
+                width: 585px;
+                @include mobileLg {
+                    width: 565px;
+                }
+                @include mobileMd {
+                    width: calc(100% - 16px);
+                    margin-left: 8px;
+                }
+                .form-group.comment {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    /* File Manager Upload Modal */
+    #fileManagerUpload {
+        .modal-dialog {
+            max-width: 1050px;
+            @include tab {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+        .modal-close {
+            position: absolute;
+            right: 14px;
+            top: 10px;
+            z-index: 1;
+        }
+    }
+
+    /* File Details */
+    #fileDetails {
+        .modal-dialog {
+            max-width: 585px;
+            width: 585px;
+            @include mobileMd {
+                width: calc(100% - 16px);
+            }
+        }
+        .modal-body {
+            padding: 30px;
+            @include mobileMd {
+                padding: 20px;
+            }
+            @include mobileSm {
+                padding-top: 50px;
+            }
+
+            .modal-close{
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                cursor: pointer;
+            }
+
+            .left {
+                margin-left: 30px;
+                margin-right: 60px;
+                @include mobileMd {
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    /* Dropzone */
+    .dropzone {
+        background: white;
+        border-radius: 3px;
+        border: 2px dashed $c2;
+        border-image: none;
+        max-width: 1050px;
+        width: 1050px;
+        min-height: 540px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tab {
+            width: calc(100% - 16px);
+        }
+        &.dz-started {
+            display: block;
+            .upload-icon {
+                display: none;
+            }
+        }
+        &.style--two {
+            min-height: 345px;
+            width: 100%;
+            max-width: 100%;
+            border-color: #CAC6FB;
+            border-radius: 20px;
+        }
+        &.style--three {
+            min-height: 275px;
+            width: 100%;
+            max-width: 100%;
+            border-color: #CAC6FB;
+            border-radius: 20px;
+        }
+    }

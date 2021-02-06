@@ -1,0 +1,94 @@
+/* ************************
+   06.6: Contact 
+   ********************* */
+
+   .contact-header {
+       padding: 15px 20px;
+   }
+
+    .contact-header-left {
+        .search-form, .add-title {
+            max-width: 625px;
+        }
+    }
+
+   .contact-header-right {
+       > div {
+           &:not(:last-child) {
+                margin-right: 20px;
+           }
+       }
+   }
+
+   .modal-upload-avatar {
+       .content {
+           p {
+               @include mobileMd {
+                   br {
+                       display: none;
+                   }
+               }
+           }
+       }
+   }
+
+
+    .contact-account-setting {
+        @include mobileMd {
+            width: 100%;
+        }
+        input {
+            padding-left: 15px;
+            padding-right: 10px;
+        }
+    }
+
+    #contactAddModal,
+    #contactEditModal {
+        .modal-dialog {
+            max-width: 750px;
+        }
+        .modal-body {
+            padding: 30px 50px 40px 60px;
+            @include mobileLg {
+                padding: 30px 20px;
+            }
+            .cancel {
+                color: #FC7383;
+            }
+        }
+        .modal-content {
+            @extend .radius-0;
+            @extend .box-shadow;
+            border: 0;
+        }
+    }
+
+
+    /* Contact Grid */
+    .contact-box {
+        .contact-head {
+            padding: 15px;
+            background-color: #ECF3FD;
+            position: relative;
+
+            .dropdown-button {
+                position: absolute;
+                right: 10px;
+                top: 15px;
+
+                .dropdown-menu {
+                    min-width: 90px;
+                }
+            }
+        }
+        .contact-body {
+            @extend .white-bg;
+            padding: 15px;
+            a {
+                display: block;
+                margin-bottom: 12px;
+                @extend .text_color;
+            }
+        }
+    }

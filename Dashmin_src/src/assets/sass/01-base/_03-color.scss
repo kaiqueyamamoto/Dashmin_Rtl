@@ -1,0 +1,11 @@
+/* ************************
+   01.3: Color
+   ********************* */
+   @include colors($text_color, text_color);
+   @include colors($black, black);
+   @include colors($white, white);
+   @include colors($c1, c1);
+   @include colors($c2, c2);
+   @include colors($c3, c3);
+   @include colors($c4, c4);
+   @include colors($c5, c5);

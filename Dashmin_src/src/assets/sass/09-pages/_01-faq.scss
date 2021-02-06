@@ -1,0 +1,40 @@
+/* ************************
+09.1: Faq
+********************* */
+
+.topic {
+    height: 80px;
+    @extend .font-20;
+    @extend .bold;
+    color: #E580FD;
+    background-color: #FEE7FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.faq {
+    &:not(:last-child) {
+        margin-bottom: 35px;
+    }
+    h5 {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 16px;
+        line-height: 1.2;
+
+        &:after {
+            width: 10px;
+            height: 10px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            @extend .c2-bg;
+            @extend .radius;
+            position: absolute;
+        }
+    }
+}

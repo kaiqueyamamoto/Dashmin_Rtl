@@ -1,0 +1,45 @@
+/* ************************
+09.4: Account Setting
+********************* */
+
+.upload-avatar {
+    margin-top: -38px;
+    @include customMq(0, 1500) {
+        margin-top: 10px;
+    }
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple {
+    @extend .border-0;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #E9E7FF;
+    border-radius: 50px;
+    display: inline-flex;
+    @extend .border-0;
+    @extend .font-14;
+    padding: 5px 10px;
+    line-height: 1;
+    margin-left: 10px;
+    @extend .c2;
+    
+    button {
+        order: 1;
+        @extend .text-danger;
+        @extend .border-0;
+        font-size: 20px;
+    }
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    position: relative;
+    bottom: -2px;
+}
+
+.switch-wrap {
+    min-width: 70px;
+}

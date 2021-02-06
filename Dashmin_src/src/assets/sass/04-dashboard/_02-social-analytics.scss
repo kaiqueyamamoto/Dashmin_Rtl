@@ -1,0 +1,104 @@
+/* ************************
+   04.2: Social Media Analytics
+   ********************* */
+   .state2 {
+      padding: 30px;
+      h2 {
+         color: #FF81A3;
+      }
+      &.style--two {
+         h2 {
+            color: #8280FD;
+         }
+      }
+      &.style--three {
+         h2 {
+            color: #09D1DE;
+         }
+      }
+      &.style--four {
+         h2 {
+            color: #4C9EFE;
+         }
+      }
+   }
+
+   /* Apex Pie2 Chart */
+   #apex_pie2-chart {
+      .apexcharts-legend-marker {
+         margin-right: 7px;
+      }
+   }
+
+   /* Apex Area6 Chart */
+   #apex_area6-chart {
+      .apexcharts-legend-series {
+         display: flex;
+      }
+   }
+
+   /* Social Statics */
+   .social-statics {
+      background-color: #FFF4E6;
+      .statics-title {
+         padding: 20px 20px 30px;
+      }
+      .followers {
+         background-color: #FFEBD1;
+         padding: 10px 20px;
+      }
+      .statics-bottom {
+         padding: 35px 20px;
+      }
+
+      &.style--two {
+         background-color: #FEE7FF;
+         .followers {
+            background-color: #FDD9FF;
+         }
+      }
+      &.style--three {
+         background-color: #FFE2E6;
+         .followers {
+            background-color: #FFD4DA;
+         }
+      }
+   }
+
+   /* Apex Pie3 Chart */
+   #apex_pie3-chart {
+      .apexcharts-tooltip.dark {
+         color: $black !important;
+      }
+   }
+
+   .apex_pie3-chart-legend {
+      .color-box {
+         width: 5px;
+         height: 11px;
+         background-color: #E580FD;
+         margin-right: 10px;
+         &.two {
+            background-color: #FC7383;
+         }
+         &.three {
+            background-color: #8280FD;
+         }
+         &.four {
+            background-color: #FFB959;
+         }
+      }
+   }
+
+
+   /* Browser Status */
+   .browser-status {
+      > div {
+         &:not(:last-child) {
+            margin-bottom: 19px;
+         }
+         &:first-child {
+            margin-bottom: 10px;
+         }
+      }
+   }

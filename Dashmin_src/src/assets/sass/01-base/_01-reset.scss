@@ -1,0 +1,194 @@
+/* ************************
+   01.1: Reset
+   ********************* */
+*,
+*::before,
+*::after {
+    outline: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+    
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+    
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+    
+::selection {
+    text-shadow: none;
+    color: #ffffff;
+    @extend.c1-bg
+}
+
+::placeholder {
+    color: $text-color !important;
+    opacity: .7 !important;
+}
+    
+iframe {
+    max-width: 100%;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+}
+
+input[type=checkbox] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+label {
+    margin: 0;
+}
+    
+button,
+button[type="submit"],
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+    
+select {
+    width: 100%;
+    max-width: 100%;
+    color: $text_color;
+}
+ 
+textarea {
+    resize: none;
+}
+    
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    @extend .c1;
+    @extend .trans3;
+    &:hover {
+        @extend .c2
+    }
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+input,
+input:hover,
+input:focus,
+input:active,
+select,
+textarea {
+    text-decoration: none;
+    outline: 0 !important;
+}
+    
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    font-weight: $bold;
+    line-height: 1;
+    @extend .black;
+    text-transform: capitalize;
+}
+
+p:last-child {
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+   
+h2 {
+    font-size: 36px;
+}
+  
+h3 {
+    font-size: 26px;
+}
+  
+h4 {
+    font-size: 17px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+pre {
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.8em 1.6em;
+}
+
+code {
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    padding: .2em .4em;
+}
+
+html, body {
+    overflow-x: hidden !important;
+}
+
+body {
+    font-size: 15px;
+    line-height: 1.466;
+    color: $text_color;
+    background-color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.main-wrapper {
+    @extend .ov-hidden;
+    display: flex;
+}

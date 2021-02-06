@@ -1,0 +1,63 @@
+/* ************************
+   04.1: Dashboard
+   ********************* */
+   /* Increse */
+   .increase {
+      max-width: 220px;
+      h2 {
+         font-size: 64px;
+      }
+      > p {
+         color: #aeaeae;
+      }
+      .card-title {
+         p {
+            margin-left: -30px;
+            position: relative;
+            top: -4px;
+         }
+      }
+   }
+
+   .congratulation-img {
+      margin-right: 10px;
+      @include mobileXs {
+         display: none;
+      }
+   }
+
+   /* Area-chart box */
+   .area-chart-box {
+      max-height: 193px;
+   }
+
+   /* Apex Column Chart */
+   #apex_column-chart {
+      .apexcharts-legend {
+         right: 15px !important;
+         .apexcharts-legend-series {
+            .apexcharts-legend-marker {
+               margin-right: 5px;
+            }
+            .apexcharts-legend-text {
+               top: -1px;
+            }
+         }
+      }
+   }
+
+   /* Apex Radar Chart */
+   #apex_radar-chart {
+      .apexcharts-legend {
+         justify-content: flex-start !important;
+         left: auto !important;
+      }
+      .apexcharts-title-text {
+         @extend .bold;
+      }
+   }
+
+
+
+
+

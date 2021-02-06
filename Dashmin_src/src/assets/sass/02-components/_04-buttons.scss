@@ -1,0 +1,356 @@
+/* ************************
+02.4: Buttons
+********************* */
+
+/* Default Btn */
+.btn {
+    padding: 17px 24px;
+    font-weight: $bold;
+    @extend .radius-50;
+    line-height: 1;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    color: $white;
+    @extend .trans3;
+    @extend .c1-bg;
+    border: none;
+    text-transform: capitalize;
+    outline: 0 !important;
+    box-shadow: 0 5px 10px rgba(#0400FC, .2) !important;
+    svg {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        top: -2px;
+    }
+
+    &.preview {
+        background-color: #E9E7FF;
+        @extend .c2;
+        @extend .no-shadow;
+        &:hover {
+            background-color: #e3e0ff;
+        }
+    }
+    &:hover {
+        @extend .c2-bg;
+        @extend .white;
+    }
+    &.long {
+        padding: 13px 30px;
+    }
+    &.style--two {
+        background-color: #E9E7FF;
+        @extend .no-shadow;
+        @extend .c2;
+        padding: 12px 24px;
+        border-radius: 50px !important;
+        &:hover {
+            background-color: #e2e0ff;
+        }
+        &.orange {
+            padding: 10px 25px;
+            background-color: #FFF4E6;
+            color: #FFB959;
+            @extend .regular;
+        }
+    }
+    &.style--three {
+        padding: 12px 24px;
+    }
+    &.s_alert {
+        background-color: #E9E7FF;
+        padding: 18px 30px;
+        @extend .c2;
+        @extend .no-shadow;
+    }
+    &.btn-lg {
+        width: 100%;
+        max-width: 245px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Btn Circle */
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    @extend .radius;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba($c1, .5);
+    svg {
+        position: relative;
+        z-index: 1;
+    }
+    &:after {
+        @extend .ba;
+        @extend .radius;
+        @include horizontal-gradient(#6F51FF, #6045E2);
+    }
+    &:hover {
+        &:after {
+            opacity: 0.7;
+        }
+    }
+    &.style--two {
+        width: 60px;
+        height: 60px;
+    }
+    &.style--three {
+        width: 30px;
+        height: 30px;
+        @extend .text_color-bg;
+        box-shadow: 0 5px 10px rgba($text_color, .5);
+        &:after {
+            display: none;
+        }
+    }
+    &.style--four {
+        width: 50px;
+        height: 50px;
+        svg {
+            left: 1px;
+        }
+    }
+    &.add-row-btn {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &.repeater-add-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        bottom: 58px;
+        left: 50%;
+        transform: translateX(-50%);
+        &.position-relative {
+            transform: none;
+            left: auto;
+            bottom: auto;
+        }
+    }
+    &.done {
+        background-color: #DBF7E8;
+        color: #67CF94;
+        @extend .no-shadow;
+        font-size: 26px;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+
+.btn-home {
+    width: 40px;
+    height: 40px;
+    @extend .radius;
+    background-color: #E9E7FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Follow Btn */
+.follow-btn, .link-btn {
+    @extend .c1;
+    @extend .bold;
+    i {
+        left: 0;
+        position: relative;
+        @extend .trans3;
+    }
+    &:hover {
+        i {
+            left: 5px;
+        }
+    }
+
+    &.soft-pink {
+        @extend .soft-pink;
+    }
+}
+
+/* Download & Print Btn */
+.download-btn,
+.print-btn {
+    @extend .radius;
+    background-color: #CCF5F8;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.print-btn {
+    background-color: #FFF4E6;
+}
+
+/* Table Detais Btn */
+.details-btn {
+    background-color: transparent;
+    @extend .c2;
+    @extend .bold;
+    i, svg {
+        @extend .trans3;
+        left: 0;
+        position: relative;
+    }
+    &:hover {
+        i, svg {
+            left: 5px;
+        }
+    }
+}
+
+/* Table Status Btn */
+.status-btn {
+    font-size: 12px;
+    line-height: 1;
+    padding: 4px 12px;
+    @extend .radius-50;
+    @extend .white;
+    &.un_paid {
+        background-color: #FC7383;
+    }
+    &.on_hold,
+    &.product {
+        background-color: #FFB959;
+    }
+    &.paid {
+        background-color: #09D1DE;
+    }
+    &.completed,
+    &.family {
+        background-color: #67CFA2;
+    }
+    &.work {
+        background-color: #FC7383;
+    }
+    &.friend,
+    &.draft {
+        background-color: #C491FF;
+    }
+    &.design {
+        background-color:  #09D1DE;
+    }
+}
+
+/* Light Btn */
+.light-btn {
+    background-color: #f0f0f0;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    @extend .trans3;
+    @extend .text_color;
+    display: inline-block;
+    &:hover {
+        background-color: #f5f5f5;
+        @extend .text_color;
+    }
+    &.c2-bg {
+        @extend .c2-bg;
+        @extend .white;
+        &:hover {
+            @extend .c1-bg;
+            @extend .white;
+        }
+    }
+}
+
+/* Change Card Btn */
+.change-card-btn {
+    display: block;
+    background-color: #f0f0f0;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    @extend .trans3;
+    @extend .black;
+    @extend .font-14;
+    &:hover {
+        @extend .black;
+        background-color: #f5f5f5;
+    }
+    span {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    &.c2 {
+        @extend .c2-bg;
+        @extend .white;
+
+        &:hover {
+            @extend .c2-bg;
+        }
+    }
+}
+
+.close-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #FFE2E6;
+    @extend .radius;
+    @extend .soft-pink;
+    font-size: 20px;
+    &:hover {
+        @extend .soft-pink;
+    }
+    i {
+        font-weight: 700;
+    }
+}
+
+.remove-btn {
+    width: 40px;
+    height: 40px;
+    @extend .radius;
+    @extend .trans3;
+    background-color: #FFE2E6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background-color: #fed8de;
+    }
+    &.style--two {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.light-btn {
+    padding: 5px 20px;
+    background-color: #E9E7FF;
+    border-radius: 50px;
+    @extend .font-14;
+    @extend .c2;
+    @extend .trans3;
+    
+    &.style--two {
+        background-color: #CCF5F8;
+        color: #09D1DE;
+    }
+    
+    &:hover {
+        background-color: $c2;
+        @extend .white;
+        &.style--two {
+            background-color: #09D1DE;
+            @extend .white;
+        }
+    }
+
+}

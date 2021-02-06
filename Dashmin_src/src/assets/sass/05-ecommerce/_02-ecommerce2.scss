@@ -1,0 +1,38 @@
+/* ************************
+   05.2: Ecommerce2
+   ********************* */
+   .campaign-processbars {
+      @include customMq(1800, 9999) {
+         margin-right: 30px;
+      }
+   }
+   .product-statistics {
+      min-width: 920px;
+   }
+   .statistic-row {
+      @extend .white-bg;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      text-transform: capitalize;
+      &.days {
+         padding: 2px 20px;
+         @extend .bold;
+      }
+      > div {
+         padding: 10px 20px;
+         flex: 1;
+         &:first-child {
+            display: flex;
+            align-items: center;
+            flex: 2;
+            img {
+               width: 30px;
+               height: 30px;
+               @extend .radius;
+               margin-right: 15px;
+               display: inline-block;
+            }
+         }
+      }
+   }

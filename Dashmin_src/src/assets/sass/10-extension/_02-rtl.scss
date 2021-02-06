@@ -1,0 +1,869 @@
+/* ************************
+10.2: Rtl
+********************* */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.sidebar {
+    left: auto;
+    right: 0;
+    direction: ltr;
+}
+
+.main-content {
+    margin-left: 0;
+    margin-right: 275px;
+}
+
+body.sidebar-folded .main-content {
+    margin-left: 0;
+    margin-right: 75px;
+}
+
+.header .logo {
+    text-align: left;
+}
+
+.menu-icon {
+    margin-right: 0px;
+}
+
+.main-header-user .user-profile .user-info {
+    margin-right: 20px;
+}
+
+.search-form .theme-input-group.header-search.theme-input-group {
+    left: 0;
+    right: auto;
+}
+
+.theme-input-group button, .theme-input-group > a {
+    right: auto;
+    left: 0;
+}
+
+.main-header-right ul li {
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.sidebar .sidebar-body {
+    direction: rtl;
+}
+
+.sidebar .sidebar-body li {
+    padding-left: initial;
+    padding-right: 30px;
+}
+
+.sidebar .sidebar-body li i {
+    left: auto;
+    right: 0;
+}
+
+.sidebar .sidebar-body li.has-sub-item:after {
+    right: auto;
+    left: 0;
+}
+
+.sidebar .sidebar-body ul ul {
+    padding-left: auto;
+    padding-right: 15px;
+}
+
+.nav {
+    padding-left: initial;
+    padding-right: 0;
+}
+
+.sidebar .sidebar-body ul.sub-menu li:before {
+    left: auto;
+    right: -17px;
+}
+
+.dropdown-menu.style--three a span {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+.dropdown-menu {
+    text-align: right;
+}
+
+.dropdown-menu .dropdown-body .figure {
+    margin-right: 0;
+    margin-left: 13px;
+}
+
+.dropdown-menu .dropdown-body .content .name {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+#apex_column-chart .apexcharts-legend {
+    right: 0;
+    left: 15px !important;
+}
+
+#apex_column-chart .apexcharts-legend .apexcharts-legend-series .apexcharts-legend-marker {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.apexcharts-xaxis, .apexcharts-yaxis {
+    direction: ltr;
+}
+.custom-checkbox ~ .todo-text {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+
+.assign_to svg {
+    margin: 0;
+    margin-right: 8px;
+}
+
+.assign_to svg.mr-2 {
+    margin-left: 8px;
+}
+
+.assign_to .assign-content {
+    right: auto;
+    left: 10px;
+    top: 0;
+}
+
+.assign_to .assign-avatar {
+    left: auto;
+    right: -10px;
+}
+
+.apexcharts-legend-marker {
+    margin-right: 0px !important;
+    margin-left: 5px;
+}
+
+.ProgressBar-wrap2 .ProgressBar-percentage,
+.ProgressBar-wrap2 .ProgressBar-percentage--text {
+    left: auto;
+    right: 62px;
+}
+
+#apex_radar-chart .apexcharts-title-text,
+#apex_radar-chart .apexcharts-subtitle-text {
+    transform: translateX(96%);
+}
+
+#apex_radar-chart .apexcharts-legend {
+    left: 0px !important;
+    right: auto !important;
+    @include mobileLg {
+        right: 0px !important;
+        left: auto !important;
+    }
+}
+
+.sidebar .sidebar-header .sidebar-toogle-pin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(100%);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-content {
+        margin-right: 0;
+    }
+}
+
+.progress_8, .progress_9, .progress_10, .progress_11, .progress_12, .progress_13, .progress_14, .progress_15 {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+table.style--three tr th:first-child:after,
+table.style--three tr td:first-child:after {
+    right: auto;
+    left: 0;
+}
+
+table.style--three tr th:first-child, table.style--three tr td:first-child {
+    padding-right: 20px;
+}
+
+.state .state-icon {
+    padding-right: 0px;
+    padding-left: 10px;
+}
+
+.statistic-row > div:first-child img {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+.footer {
+    padding-left: 0px;
+    padding-right: 290px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+        padding: 0 15px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+body {
+    &.sidebar-folded {
+        .footer {
+            padding-left: 0;
+            padding-right: 90px;
+            @include tab {
+                padding: 0 15px;
+            }
+        }
+       
+        &.open-sidebar-folded {
+            .footer {
+                padding-left: 0;
+                padding-right: 290px;
+                @include tab {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+ }
+
+table.order-list-table th:first-child, table.order-list-table td:first-child {
+    padding-left: 16px;
+    padding-right: 28px;
+}
+
+.pagination {
+    direction: ltr;
+}
+
+.color-group ul li:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+table.cart_table tr th:last-child, table.cart_table tr td:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+table.cart_table tr td:last-child {
+    min-height: 71px;
+}
+
+table.cart_table tr td:last-child a {
+    padding: 10px;
+    margin-right: 5px;
+    position: relative;
+    top: -5px;
+}
+
+.apex_pie3-chart-legend .color-box {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+table.style--four td .country-flag {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+table.style--four th:first-child, table.style--four td:first-child {
+    text-align: right;
+}
+
+.list-button li:not(:last-child),
+table.style--five td .img {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.aside-body li a:after {
+    left: auto;
+    right: -20px;
+}
+
+.aside-header .aside-btn-text {
+    border-radius: 0 100px 100px 0;
+}
+
+.aside-header .btn-circle {
+    left: auto;
+    right: 0;
+}
+
+.mail-list-item .avatar, .main-mail .avatar {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.mail-list-item-right > div:not(:last-child), .mail-list-item-right > button:not(:last-child), .mail-right > div:not(:last-child), .mail-right > button:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+.mail-compose .form-group .cc-btns, .modal-body .form-group .cc-btns {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.mail-compose .form-group .close-btn, .modal-body .form-group .close-btn {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.mail-compose .form-group .input-wrap span svg, .modal-body .form-group .input-wrap span svg {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.chat_aside .aside-header .dropdown-button {
+    right: auto;
+    left: 15px;
+}
+
+.message .figure {
+    margin-left: 14px;
+    margin-right: 0px;
+}
+
+.chat-body,
+.aside-body {
+    direction: ltr;
+}
+
+.chat-body *,
+.aside-body * {
+    direction: rtl;
+}
+
+.chat_aside .aside-header .aside-header-bottom .nav-tabs li:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.todo-list .single-row:after {
+    left: auto;
+    right: 0;
+}
+
+.add-new_task .todo_actions > div:not(:last-child), .task-details .todo_actions > div:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 60px;
+}
+
+.tag_color {
+    margin-right: 0px;
+    margin-left: 6px;
+}
+
+.task-details .show-date svg {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+table.invoice-list-table th .star, table.contact-list-table th .star, table.invoice-list-table td .star, table.contact-list-table td .star, table.invoice-list th .star, table.invoice-list td .star {
+    margin-left: 0px;
+    margin-right: 36px;
+}
+
+.list-invoice li {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+
+.list-invoice li.location:before, .list-invoice li.call:before, .list-invoice li.mail:before, .list-invoice li.user:before {
+    left: auto;
+    right: 0;
+}
+
+.cart-collaterals {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.proceed-to-checkout.invoice-edit .btn:not(:last-child), .proceed-to-checkout.invoice-edit #example-vertical > .actions ul li a:not(:last-child)[href="#next"], #example-vertical > .actions ul li .proceed-to-checkout.invoice-edit a:not(:last-child)[href="#next"], .proceed-to-checkout.invoice-edit #example-vertical > .actions ul li a:not(:last-child)[href="#finish"], #example-vertical > .actions ul li .proceed-to-checkout.invoice-edit a:not(:last-child)[href="#finish"] {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+table.invoice-list-table.style-two td .tr-close, table.style-two.contact-list-table td .tr-close, table.invoice-list.style-two td .tr-close {
+    margin-left: 0px;
+    margin-right: 60px;
+}
+
+table.contact-list-table td.actions span:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.contact-box .contact-head .dropdown-button {
+    right: auto;
+    left: 10px;
+}
+
+.member a:not(:last-child) {
+    margin-right: 0px;
+    margin-left: -10px;
+}
+
+.contact-header-right > div:not(:last-child), .project-header-right > div:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.board:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+.board .board-cards .board-card:before {
+    left: auto;
+    right: -1px;
+}
+
+.board-wrapper {
+    padding-left: 0px;
+    padding-right: 1px;
+}
+
+#projectTaskDetails .modal-content .dashboard-date {
+    margin-left: 0px;
+    margin-right: 25px;
+}
+
+.labels .label:not(:last-child), .label-item .label:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.file-attachments .attachment .attachment-close {
+    left: auto;
+    right: -7px;
+}
+
+#projectTaskDetails .modal-content .checklist .process-bar-wrapper .process-width {
+    left: -35px;
+    right: auto;
+}
+
+#projectTaskDetails .modal-content .checklist .checklist-item-wrap .checklist-item {
+    margin-left: 0px;
+    margin-right: 35px;
+}
+
+.comment-action-links .comment-action-link:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 14px;
+}
+
+.comment-action-links .comment-action-link:not(:last-child):after {
+    right: auto;
+    left: -12px;
+}
+
+.change-card-btn span:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.checklist-items .checklist-item .item {
+    padding-left: 0px;
+    padding-right: 26px;
+}
+
+.theme-input-group.input-wrap .theme-input-style {
+    padding-right: 0px !important;
+    padding-left: 40px !important;
+}
+
+#projectShareModal .modal-content .modal-close {
+    right: auto;
+    left: 12px;
+}
+
+.file .custom-checkbox {
+    left: auto;
+    right: -10px;
+}
+
+#shareModal .modal-content .modal-close {
+    right: auto;
+    left: 12px;
+}
+
+.process-bar-wrapper.style--four .process-width {
+    right: auto;
+    left: -100px;
+}
+
+.icon__name {
+    margin-left: 0px;
+    margin-right: 14px;
+}
+
+.chip .chip-content {
+    padding-left: 15px;
+    padding-right: 40px;
+}
+
+.chip .chip-content .img {
+    left: auto;
+    right: 0;
+}
+
+.chip > svg {
+    left: auto;
+    right: -5px;
+}
+
+.custom-select.style--two {
+    background-position: left center; 
+}
+
+.dashboard-date .input-group-addon {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.input-group.addon .form-control {
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group.addon .form-control.style--two {
+    border-radius: 0 5px 5px 0;
+}
+
+.switch .check:after {
+    transform: rotate(45deg) translate(2px, 12px);
+}
+
+.switch .check:before {
+    transform: rotate(-45deg) translate(-12px, 2px);
+}
+
+.switch.large .check:after {
+    transform: rotate(-45deg) translate(-21px, 4px);
+}
+
+.switch.large .check:before {
+    transform: rotate(45deg) translate(4px, 21px);
+}
+
+.switch input:disabled ~ .control .check:after {
+    transform: rotate(0deg) translate(-7px, 11px);
+}
+
+.switch.large input:disabled ~ .control .check:after {
+    transform: rotate(0deg) translate(-12px, 18px);
+}
+
+.switch.small .check:after {
+    transform: rotate(45deg) translate(2px, 7px);
+}
+
+.switch.small .check:before {
+    transform: rotate(-45deg) translate(-7px, 2px);
+}
+
+.switch.small input:disabled ~ .control .check:after {
+    transform: rotate(0deg) translate(-4px, 6.5px);
+}
+
+.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+    right: auto;
+    left: 10px;
+}
+
+.note img, .note svg, .note i, .note b {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+#smartwizard ul.nav {
+    flex-direction: row-reverse;
+}
+
+table.invoice-list th:last-child, table.invoice-list td:last-child {
+    text-align: left;
+    padding-right: 0px;
+    padding-left: 40px;
+}
+
+table.invoice-list th:first-child, table.invoice-list td:first-child {
+    padding-left: 0px;
+    padding-right: 58px;
+}
+
+table.invoice-list .custom-checkbox {
+    left: auto;
+    right: 20px;
+}
+
+.post-footer > div .icon {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.post-footer > div:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 50px;
+}
+
+@media only screen and (max-width: 575px) {
+    .post-footer > div:not(:last-child) {
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+}
+
+.post-controls > div.location {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+.comments-area ul.children {
+    margin-left: 0px;
+    margin-right: 70px;
+}
+
+.profile-pic .upload-button, .cover-img .upload-button {
+    right: auto;
+    left: 20px;
+}
+
+.progress_22 .ProgressBar-wrap2 .ProgressBar-percentage {
+    left: auto;
+    right: 3%;
+}
+
+.about-tab-content {
+    border-left: 0px solid;
+    border-right: 1px solid #aeaeae;
+}
+
+.add-work-form .add-work-form-close, .work-update-form .add-work-form-close {
+    right: auto;
+    left: 0;
+}
+
+.progress_23 .ProgressBar-wrap2 .ProgressBar-percentage {
+    left: auto;
+    right: 4%;
+}
+
+.timeline.style--two {
+    padding-left: 0px;
+    padding-right: 60px;
+}
+
+.timeline.style--two:after {
+    left: auto;
+    right: 25.5px;
+}
+
+.timeline .event:after {
+    left: auto;
+    right: -43px;
+}
+
+.timeline.style--two .event:before {
+    left: auto;
+    right: 70px;
+}
+
+.faq h5 {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.faq h5:after {
+    left: auto;
+    right: 0;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.price-body ul li {
+    padding-left: 0px;
+    padding-right: 24px;
+}
+
+.price-body ul li i {
+    left: auto;
+    right: 0;
+}
+
+.p_header-content {
+    padding-left: 0px;
+    margin-right: 30px;
+}
+
+.timeline {
+    border-left: 0px solid #E9E7FF;
+    border-right: 5px solid #E9E7FF;
+    margin-left: 0;
+    margin-right: 24%;
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline {
+        margin-right: 0;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline .event:after {
+        right: -33px;
+    }
+}
+
+.timeline .event:before {
+    left: auto;
+    right: -190px;
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline .event:before {
+        right: 70px;
+    }
+}
+
+.time_circles {
+    direction: ltr;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.dragable-btn a:not(:last-child) {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+.dragable-list > div svg, .dragable-list > div i {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev,
+.swiper-centered-slide ~ .swiper-button-prev:after,
+.swiper-centered-slide ~ .swiper-button-next:after {
+    transform: rotate(180deg);
+}
+
+.treeview .list-group {
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 479px) {
+    .main-header-right ul li {
+        margin-left: 0px;
+        margin-right: 9px;
+    }
+}
+
+.list-inline {
+    padding-right: 0;
+}
+
+.mail-list-item .dropdown-button {
+    margin-left: 14px;
+}
+
+.input-group.bootstrap-touchspin .input-group-append button.btn {
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group.bootstrap-touchspin .input-group-prepend button.btn {
+    border-radius: 0px 5px 5px 0px;
+}
+
+@media only screen and (max-width: 575px) {
+    #example-vertical > .steps {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .about-tab-content {
+        border: none;
+    }
+}
+
+.edit-skill .form-control {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline.style--two .event:after {
+        right: -43px;
+    }
+}
+
+input[type=checkbox] {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+#fullCalModal .calendar-modal-location .icon, #fullCalModal .calendar-modal-visibility .icon,
+#fullCalModal .calendar-modal-Event .color {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.project-box .custom-checkbox {
+    position: absolute;
+    left: auto;
+    right: -7px;
+    top: 2px;
+}
+
+.project-header-right .custom-checkbox {
+    margin-right: 0px;
+    margin-left: 17px;
+}
+
+
+
+.form-element.style--two {
+    input {
+        border-radius: 7px 0 0 7px !important;
+    }
+    .input-group-text {
+        border-radius: 0 7px 7px 0 !important;
+    }
+}
+
+#contactEditModal {
+    .contact-account-setting input {
+        text-align: right;
+    }
+    .dashboard-date.style--two {
+        flex-direction: row-reverse;
+    }
+}

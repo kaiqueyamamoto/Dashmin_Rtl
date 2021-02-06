@@ -1,0 +1,547 @@
+/* ************************
+02.6: Progress Bars & Process Bars
+********************* */
+
+.ProgressBar-wrap {
+    height: 175px;
+    width: 175px;
+    margin: 0 auto;
+    @include customMq(1500, 1700) {
+        width: 150px;
+        height: 150px;
+    }
+    .ProgressBar,
+    .ProgressBar-contentCircle{
+        display: table;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .ProgressBar-circle,
+    .ProgressBar-background{
+        fill: white;
+        stroke: #24D4E0;
+        stroke-width: 20px;
+        stroke-linecap: round;
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        z-index: 10;
+    }
+    .ProgressBar-background{
+        stroke: #CCF5F8;
+        stroke-width: 20px;
+        z-index: 0;
+    }
+    .ProgressBar-percentage--text {
+        position: absolute;
+        left: 45%;
+        top: 37%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+    }
+    .ProgressBar-percentage{
+      font-size: 40px;
+      @extend .bold;
+      @extend .black;
+      text-align: center;
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      top: 10px;
+      span {
+          font-size: 70%;
+          top: -8px;
+          position: relative;
+      }
+    }
+}
+
+.ProgressBar-wrap2 {
+    @extend .ProgressBar-wrap;
+    width: 48px;
+    height: 48px;
+    margin: 10px 0;
+    .ProgressBar,
+    .ProgressBar-contentCircle{
+        display: block;
+    }
+    .ProgressBar-circle,
+    .ProgressBar-background{
+        fill: none;
+        stroke: #8280FD;
+        stroke-width: 20px;
+    }
+    .ProgressBar-background{
+        stroke: #f5f5f5;
+        stroke-width: 20px;
+    }
+    .ProgressBar-percentage--text {
+        left: 62px;
+        top: 30px;
+        transform: none;
+        width: max-content;
+        font-size: 14px;
+    }
+    .ProgressBar-percentage{
+        font-size: 36px;
+        @extend .black;
+        width: max-content;
+        display: block;
+        position: absolute;
+        top: -14px;
+        left: 62px;
+        @include IE {
+            min-width: 80px;
+        }
+    }
+}
+
+/* progress info */
+.progress-info {
+    div {
+        @extend .black;
+        font-size: 14px;
+        &:not(:first-child) {
+            @extend .bold;
+        }
+        &:first-child {
+            flex-basis: 40%;
+        }
+        &:nth-child(2) {
+            flex-basis: 35%;
+        }
+        &:last-child {
+            flex-basis: 25%;
+        }
+    }
+}
+.progress-title {
+    margin-bottom: 34px;
+}
+.progress_1 {
+    background-color: #CCF5F8;
+}
+.progress_2 {
+    background-color: #FEE7FF;
+    .ProgressBar-wrap {
+        .ProgressBar-circle,
+        .ProgressBar-background{
+            stroke: #C491FF;
+        }
+        .ProgressBar-background{
+            stroke: #FEE7FF;
+        }
+    }
+}
+.progress_3 {
+    background-color: #E9E7FF;
+    .ProgressBar-wrap {
+        .ProgressBar-circle,
+        .ProgressBar-background{
+            stroke: #8280FD;
+        }
+        .ProgressBar-background{
+            stroke: #E9E7FF;
+        }
+    }
+}
+.progress_5 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #E580FD;
+        }
+    }
+}
+.progress_6 {
+    background-color: #FEE7FF;
+    .ProgressBar-wrap {
+        width: 185px;
+        height: 185px;
+        @include customMq(1500, 1700) {
+            width: 150px;
+            height: 160px;
+        }
+        .ProgressBar-circle {
+            stroke: #C491FF;
+        }
+    }
+}
+.progress_7 {
+    background-color: #E9E7FF;
+    .ProgressBar-wrap2 {
+        width: 185px;
+        height: 185px;
+        @include customMq(1500, 1700) {
+            width: 150px;
+            height: 160px;
+        }
+        .ProgressBar-circle {
+            stroke: #8280FD;
+        }
+    }
+}
+.progress_8,
+.progress_9,
+.progress_10,
+.progress_11,
+.progress_12,
+.progress_13,
+.progress_14,
+.progress_15 {
+    margin-right: 12px;
+    .ProgressBar-wrap2 {
+        width: 36px;
+        height: 36px;
+        margin: 0;
+    }
+}
+.progress_9 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #FFB959;
+        }
+    }
+}
+.progress_10 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #FF81A3;
+        }
+    }
+}
+.progress_11 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: $c3;
+        }
+    }
+}
+.progress_12 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #E580FD;
+        }
+    }
+}
+.progress_13 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #09D1DE;
+        }
+    }
+}
+.progress_14 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #4C9EFE;
+        }
+    }
+}
+.progress_15 {
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #FFB959;
+        }
+    }
+}
+.progress_16 {
+    margin-right: 0px;
+    .ProgressBar-wrap2 {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+        .ProgressBar {
+            position: relative;
+        }
+        .ProgressBar-circle {
+            stroke: #C491FF;
+            stroke-width: 10px;
+        }
+        .ProgressBar-background{
+            stroke-width: 10px;
+        }
+
+        .progress-middle-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            h3 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+.progress_17 {
+    @extend .progress_16;
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #67CF94;
+        }
+    }
+}
+.progress_18 {
+    @extend .progress_16;
+    .ProgressBar-wrap2 {
+        .ProgressBar-circle {
+            stroke: #FC7383;
+        }
+    }
+}
+.progress_19 {
+    @extend .progress_16;
+    .ProgressBar-wrap2 {
+        width: 80px;
+        height: 80px;
+        .ProgressBar-circle {
+            stroke: #FDAC41;
+        }
+    }
+}
+.progress_20 {
+    background-color: $white;
+    .ProgressBar-background {
+        stroke: $white;
+    }
+    .ProgressBar-wrap {
+        width: 250px;
+        height: 250px;
+        @include customMq(1500, 1700) {
+            width: 150px;
+            height: 160px;
+        }
+        .ProgressBar-circle {
+            stroke: #8280FD;
+            fill: #f0f0f0;
+        }
+    }
+}
+.progress_21 {
+    .ProgressBar-wrap {
+        width: 52px;
+        height: 52px;
+        .ProgressBar-circle {
+            stroke: #FDAC41;
+        }
+    }
+}
+.progress_22 {
+    .ProgressBar-wrap2 {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        .ProgressBar-circle {
+            stroke: #8280FD;
+        }
+        .ProgressBar-percentage {
+            position: absolute;
+            @extend .font-14;
+            color: #8280FD;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+.progress_23 {
+    .ProgressBar-wrap2 {
+        width: 76px;
+        height: 76px;
+        margin: 0;
+        .ProgressBar-circle {
+            stroke: #fff;
+        }
+        .ProgressBar-background {
+            stroke: #9D9BFF;
+        }
+        .ProgressBar-percentage {
+            position: absolute;
+            @extend .font-20;
+            color: #fff;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/* Process bar */
+.process-bar-wrapper {
+    width: 100%;
+    height: 5px;
+    background-color: #f8f8f8;
+    position: relative;
+    margin-top: 40px;
+    @extend .radius-50;
+    .process-name, .process-width {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 2px;
+        text-transform: capitalize;
+        @extend .black;
+    }
+    .process-width {
+        left: auto;
+        right: 0;
+    }
+    .process-bar {
+        background-color: #FFBB5E;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        @extend .radius-50;
+        &.style--two {
+            @extend .c3-bg;
+        }
+        &.style--three {
+            background-color: #FF81A3;
+        }
+        &.style--four {
+            background-color: #24D4E0;
+        }
+    }
+    &.style--two {
+        width: 120px;
+        height: 7px;
+        margin-top: 60px;
+        background-color: #ECF3FD;
+        .process-width {
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+        .process-bar {
+            background-color: #4F9DF8;
+        }
+    }
+    &.style--three {
+        height: 25px;
+        background-color: #DBF7E8;
+        margin-top: 75px;
+    }
+    &.style--four {
+        width: calc(100% - 80px);
+        height: 10px;
+        background-color: #ECF3FD;
+        margin: 0;
+        @include mobileLg {
+            width: calc(100% - 60px);
+        }
+        @include mobileMd {
+            margin-left: 56px;
+            margin-top: 5px;
+            width: calc(100% - 60px - 56px);
+        }
+        .process-width {
+            right: -80px;
+            top: -10px;
+            @extend .bold;
+            @extend .text_color;
+            font-size: 15px;
+            width: 80px;
+            text-align: right;
+            @include mobileLg {
+                width: 60px;
+                right: -60px;
+            }
+        }
+        .process-bar {
+            background-color: #4F9DF8;
+        }
+        &.paste {
+            background-color: #CCF5F8;
+            .process-bar {
+                background-color: #09D1DE;
+            }
+        }
+        &.green {
+            background-color: #DBF7E8;
+            .process-bar {
+                background-color: #67CF94;
+            }
+        }
+        &.orange {
+            background-color: #FFF4E6;
+            .process-bar {
+                background-color: #FFB959;
+            }
+        }
+    }
+    &.style--five {
+        max-width: 290px;
+        height: 10px;
+        margin: 0;
+        display: inline-block;
+        background-color: #FFF4E6;
+        &.pink {
+            background-color: #FEE7FF;
+            .process-bar {
+                background-color: #E580FD;
+            }
+        }
+        
+        &.green {
+            background-color: #DBF7E8;
+            .process-bar {
+                background-color: #67CF94;
+            }
+        }
+        &.blue {
+            background-color: #ECF3FD;
+            .process-bar {
+                background-color: #4F9DF8;
+            }
+        }
+        &.c2 {
+            background-color: #E9E7FF;
+            .process-bar {
+                background-color: #8280FD;
+            }
+        }
+    }
+}
+/* Home Social Media Process */
+.country-performance {
+    padding: 0 20px;
+    .process-bar-wrapper {
+       background-color: #CCF5F8;
+       height: 10px;
+       .process-name {
+          @extend .black;
+       }
+       .process-bar {
+          background-color: #09D1DE;
+       }
+       &.style--two {
+          background-color: #FFF4E6;
+          width: 100%;
+          margin-top: 40px;
+          .process-bar {
+             background-color: #FFB959;
+          }
+       }
+    }
+ }
+ 
+
+/* Process Bars */
+.process-bars {
+    width: 40%;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    @include customMq(0, 1500) {
+       position: relative;
+    }
+    @include customMq(0, 1200) {
+       margin: 50px auto 0;
+       width: 80%;
+       left: 0;
+    }
+}

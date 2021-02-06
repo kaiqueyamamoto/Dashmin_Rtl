@@ -1,0 +1,102 @@
+/* ************************
+09.3: Timeline
+********************* */
+
+.timeline {
+    border-left: 5px solid #E9E7FF;
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.4em;
+    padding: 0 30px;
+    list-style: none;
+    max-width: 70%;
+    margin-left: 24%;
+
+    @include mobileLg {
+        margin-left: 0;
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    &.style--two {
+        @extend .white-bg;
+        padding-left: 60px;
+        max-width: 100%;
+        margin: 0;
+        border: 0;
+        z-index: 1;
+        padding-bottom: 30px;
+        @include mobileLg {
+            padding-left: 50px;
+            padding-right: 10px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 25.5px;
+            top: 3px;
+            height: calc(100% - 36px);
+            width: 5px;
+            background-color: #E9E7FF;
+            z-index: -1;
+            border-radius: 50px;
+        }
+
+        .event:before {
+            left: 70px;
+            min-width: auto;
+            font-weight: normal;
+            @extend .text_color;
+        }
+    }
+}
+
+.timeline .event {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 26px;
+    }
+
+    span {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    h4 {
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+}
+
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+.timeline .event:before {
+    left: -190px;
+    @extend .black;
+    @extend .bold;
+    @extend .font-14;
+    content: attr(data-date);
+    text-align: right;
+    min-width: 120px;
+    @include mobileLg {
+        left: 70px;
+    }
+}
+
+.timeline .event:after {
+    left: -43px;
+    content: url(../img/png-icon/time.png);
+
+    @include mobileLg {
+        left: -33px;
+    }
+}
+  

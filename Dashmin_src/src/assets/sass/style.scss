@@ -1,0 +1,80 @@
+/*
+	*******************
+	Template name:  Dashmin
+	Version:        1.0
+	Author:         ThemeLooks
+	Author url:     http://themelooks.com
+
+	NOTE:
+	-----
+	Please DO NOT EDIT THIS CSS, you may need to use "custom.css" file for writing your custom css.
+	We may release future updates so it will overwrite this file. it's better and safer to use "custom.css".
+
+    ******** CSS INDEX ********
+    01. Base
+        1.1 Reset 
+        1.2 Padding/Margin
+        1.3 color
+    02. Components
+        2.1 Common Classes
+        2.2 Animations
+        2.3 Pagination
+        2.4 Buttons
+        2.5 Table
+        2.6 Progress
+        2.7 Input
+    03. Layout
+        3.1 Header 
+        3.2 Sidebar
+        3.3 Footer
+        3.4 Main Content
+        3.5 Aside
+    04. Dashboard
+        4.1 Dashboard
+        4.2 Social Analytics
+    05. Ecommerce
+        5.1 Ecommerce1
+        5.2 Ecommerce2
+        5.3 Product Details
+        5.4 Cartlist
+    06. Apps
+        6.1 Mail
+        6.2 Chat
+        6.3 Todo List
+        6.4 Calendar
+        6.5 Invoice
+        6.6 Contact
+        6.7 Project Manager
+        6.8 File Manager
+    07. Form & Table
+        7.1 Form Elements
+        7.2 Form Wizard
+    08. UI Elements
+        8.1 Widget
+        8.2 Icons
+    09. Pages
+        9.1 FAQ
+        9.2 Price
+        9.3 Timeline
+        9.4 Account Settings
+        9.5 Authentications
+        9.6 Coming Soon
+        9.7 Miscellaneous
+        9.8 Profile
+    10. Extension
+        10.1 Extension
+
+    ********************/
+    
+// IMPORT ALL DIRECTORY SASS FILE
+@import '00-abstracts/00-abstracts-dir';
+@import '01-base/00-base-dir';
+@import '02-components/00-component-dir';
+@import '03-layout/00-layout-dir';
+@import '04-dashboard/00-dashboard-dir';
+@import '05-ecommerce/00-ecommerce-dir';
+@import '06-apps/00-apps-dir';
+@import '07-form&table/00-form&table-dir';
+@import '08-ui_elements/00-ui_elements-dir';
+@import '09-pages/00-pages-dir';
+@import '10-extension/00-extension-dir';

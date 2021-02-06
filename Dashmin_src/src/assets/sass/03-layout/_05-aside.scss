@@ -1,0 +1,220 @@
+/* ************************
+   03.5: Aside
+   ********************* */
+
+   //Tasks Aside
+.tasks_aside {
+   width: 240px;
+   height: 100%;
+   @extend .box-shadow;
+   @extend .white-bg;
+   margin-right: 15px;
+   margin-left: 15px;
+   @include mobileLg {
+      width: auto;
+   }
+   &.calendar_aside {
+      @include customMq(767, 1500) {
+         width: 202px;
+      }
+      @include customMq(767, 1200) {
+         margin-right: 0;
+      }
+   }
+}
+
+.aside-header {
+   position: relative;
+   padding: 20px;
+   .aside-btn-text {
+       height: 60px;
+       background-color: #E9E7FF;
+       width: calc(100% - 20px);
+       display: flex;
+       justify-content: center;
+       padding: 10px;
+       border-radius: 100px 0 0 100px;
+   }
+   .btn-circle {
+       position: absolute;
+       left: 0;
+       top: 0;
+   }
+}
+
+.aside-body {
+   padding: 20px;
+   &.external-events {
+      padding: 15px;
+   }
+   li {
+      margin-bottom: 12px;
+      a {
+         @extend .black;
+         position: relative;
+         display: block;
+         &:after {
+            @extend .ba;
+            width: 0px;
+            height: 2px;
+            @extend .c1-bg;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+         }
+         &.active {
+            font-weight: bold;
+            @extend .c1;
+            &:after {
+               width: 12px;
+            }
+         }
+      }
+      &:hover, &.active {
+         a {
+            font-weight: bold;
+            @extend .c1;
+            &:after {
+               width: 12px;
+            }
+         }
+      }
+       &.nav-category {
+           color: #aeaeae;
+       }
+       &.less {
+           position: relative;
+           cursor: pointer;
+           &:after {
+               position: absolute;
+               right: 0;
+               top: 50%;
+               width: 12px;
+               height: 2px;
+               transform: translateY(-50%);
+               content: "";
+               @extend .trans3;
+               background-image: url(../img/svg/minus.svg);
+           }
+           &.collapsed {
+               &:after {
+                   background-image: url(../img/svg/plus.svg);
+                   height: 12px;
+               }
+           }
+       }
+       &.lavel {
+           a {
+               &:after {
+                   display: none;
+               }
+           }
+           &:hover, &.active {
+               a {
+                   @extend .regular;
+               }
+           }
+       }
+       &.fc-event {
+          background-color: transparent;
+          font-size: 15px;
+          margin-bottom: 20px;
+          a {
+            @extend .black;
+            &:hover {
+               @extend .black;
+            }
+          }
+          span.tag_color {
+            width: 4px;
+            height: 12px;
+         }
+         &.ui-draggable-dragging {
+             background-color: #DBF7E8;
+             padding: 5px 8px;
+             span.tag_color {
+                display: none;
+             }
+         }
+      }
+   }
+}
+
+.chat_aside {
+   position: relative;
+   width: 375px;
+   height: auto;
+   @extend .box-shadow;
+   @extend .white-bg;
+   margin-right: 15px;
+   margin-left: 15px;
+   @include customMq(0, 1200) {
+      width: 330px;
+   }
+   @include mobileLg {
+      width: auto;
+   }
+
+   .aside-header {
+      @extend .c1-bg;
+      padding: 0;
+      .aside-header-top {
+         padding: 20px 24px;
+      }
+
+      .dropdown-button {
+         position: absolute;
+         right: 15px;
+         top: 15px;
+      }
+
+      .profile {
+         .content {
+            h4, .name {
+               @extend .white;
+            }
+            p {
+               color: #C3BEFF;
+            }
+         }
+      }
+
+      .aside-header-bottom {
+         position: relative;
+         z-index: 1;
+         &:after {
+            @extend .ba;
+            @include vertical-gradient(#6F51FF, #6045E2);
+            z-index: -1;
+         }
+
+         .nav-tabs {
+            @extend .border-0;
+            justify-content: center;
+            li {
+               &:not(:last-child) {
+                  margin-right: 20px;
+               }
+               a {
+                  padding: 5px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 40px;
+                  height: 45px;
+                  cursor: pointer;
+                  &:hover, &.active {
+                     background-color: rgba(#ffffff, 0.1);
+                  }
+               }
+            }
+         }
+      }
+   }
+   .aside-body {
+      padding: 0px;
+      height: calc(100vh - 335px);
+      position: relative;
+      top: 0px;
+   }
+}

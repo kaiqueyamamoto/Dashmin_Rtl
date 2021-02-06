@@ -1,0 +1,333 @@
+/* ************************
+   06.4: Calendar 
+   ********************* */
+
+    .fc table {
+            font-size: 17px;
+            @extend .bold;
+            border-spacing: 8px 4px;
+            border-collapse: separate;
+    }
+
+    .fc-bg table {
+
+        tbody {
+            @extend .border-0;
+            td {
+                @extend .radius-5;
+                @extend .border-0;
+
+                &.fc-day {
+                    @extend .border-0;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    .fc-view {
+        margin: 0 -4px;
+        > table {
+            border-spacing: 0;
+            border-collapse: collapse;
+
+            thead {
+                th {
+                    &.fc-day-header {
+                        background-color: #ECF3FD;
+                        @extend .c2;
+                        @extend .border-0;
+                        @extend .radius-5;
+                        text-align: left;
+                        padding: 3px 10px;
+                        padding-left: 20px;
+                        @include mobileSm {
+                            padding-left: 8px;
+                        }
+
+                        &.fc-sun {
+                            background-color: #FFF4E6;
+                            color: #FFB959;
+                        }
+                    }
+                }
+            }
+
+
+            tbody, thead {
+                td {
+                    @extend .border-0;
+                }
+            }
+        }
+    }
+
+    .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+        float: none;
+        padding: 4px 10px;
+        display: inline-block;
+    }
+
+    .fc-toolbar.fc-header-toolbar {
+        @extend .white-bg;
+        padding: 12px 20px;
+        @extend .radius-5;
+        margin-bottom: 4px;
+        .fc-left {
+            h2 {
+                @extend .font-20;
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            .fc-button {
+                padding: 0;
+            }
+
+            .fc-today-button {
+                margin-left: 15px;
+                background-color: #DBF7E8;
+                color: #67CF94;
+                @extend .radius-50;
+                @extend .font-14;
+                padding: 2px 16px;
+                text-transform: capitalize;
+                height: 25px;
+            }
+        }
+
+        .fc-button-group {
+            .fc-button {
+                background-color: #F5F5F5;
+                @extend .radius-50;
+                @extend .font-14;
+                padding: 5px 20px;
+                text-transform: capitalize;
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+
+        }
+    }
+
+    .fc-event-container {
+        .fc-content {
+            font-size: 12px;
+            .fc-time {
+                position: relative;
+                margin-right: 12px;
+                &:after {
+                    position: absolute;
+                    right: -10;
+                    content: "m";
+                    bottom: 0;
+                }
+            }
+            .fc-title {
+                @extend .regular;
+            }
+        }
+    }
+
+    .fc-day-top {
+        &.fc-today {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "Today";
+                color: #aeaeae;
+                right: 10px;
+                top: 8px;
+                @extend .regular;
+                line-height: 1;
+            }
+        }
+    }
+    
+
+    .fc-button {
+        background: none;
+        @extend .border-0;
+        @extend .no-shadow;
+    }
+
+    .m_style {
+        display: flex;
+        align-items: center;
+        border: 1px solid #D5D5D5;
+        padding: 3px 10px;
+        height: 32px;
+        border-radius: 2px;
+        label {
+            display: inline-flex;
+            margin-right: 10px;
+            svg {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        input {
+            border: none;
+            width: 100%;
+        }
+        select {
+            border: none;
+            width: 180px;
+            &.m-state {
+                width: 70px;
+            }
+        }
+    }
+
+    #createEventModal {
+        .modal-content {
+            @extend .box-shadow;
+            @extend .border-0;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        .modal-header {
+            .calendar-modal-title {
+                label {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .calendar-modal-private {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 33px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .close {
+                padding: 10px;
+                position: absolute;
+                right: 20px;
+                top: 16px;
+            }
+        }
+
+        .calendar-modal-checkbox {
+            label {
+                width: max-content;
+                cursor: pointer;
+            }
+        }
+        .modal-footer {
+            .btn {
+                padding: 13px 25px;
+            }
+        }
+    }
+    
+    #fullCalModal {
+        .modal-dialog {
+            max-width: 290px;
+            @include mobileMd {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .modal-content {
+            @extend .box-shadow;
+            border: 0;
+            border-top: 3px solid #4F9DF8;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        .modal-header {
+            h6 {
+                line-height: 1.28;
+                text-transform: none;
+                margin-top: 2px;
+                margin-bottom: 4px;
+            }
+        }
+        .calendar-modal-location,
+        .calendar-modal-visibility {
+            margin-bottom: 3px;
+            @extend .font-14;
+            .icon {
+                width: 10px;
+                display: inline-flex;
+                margin-right: 10px;
+            }
+        }
+        .calendar-modal-Event {
+            @extend .font-14;
+            .color {
+                width: 10px;
+                height: 10px;
+                background-color: #4F9DF8;
+                @extend .radius;
+                display: inline-flex;
+                margin-right: 10px;
+            }
+        }
+        .modal-footer {
+            position: relative;
+            &:after {
+                width: calc(100% - 32px);
+                left: 16px;
+                background-color: #F5F5F5;
+                height: 1px;
+                top: 0;
+                content: "";
+                position: absolute;
+            }
+            &:before {
+                width: 1px;
+                height: 14px;
+                left: 50%;
+                background-color: #E5E5E5;
+                top: 50%;
+                margin-top: -7px;
+                content: "";
+                position: absolute;
+
+            }
+            > button {
+                position: relative;
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .fc-toolbar {
+        .fc-left,
+        .fc-right {
+            @include mobileMd {
+                width: 100%;
+            }
+        }
+        .fc-right {
+            @include mobileMd {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .fc-day-top.fc-today:after {
+        @include medium {
+            font-size: 12px;
+        }
+        @include tab {
+            font-size: 10px;
+            right: auto;
+            left: 3px;
+            top: 30px;
+        }
+    }
+
+    .fc-event.fc-resizable {
+        background-color: #50cb89;
+    }
+    .fc-event.fc-resizable .fc-content .fc-title {
+        color: #fff;
+    }

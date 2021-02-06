@@ -1,0 +1,33 @@
+/* ************************
+   05.1: Ecommerce
+   ********************* */
+   .state {
+      padding: 27px 10px 30px;
+      .state-icon {
+         flex-basis: 40%;
+         padding-right: 10px;
+      }
+   }
+
+   .product-list-item {
+      .img {
+         img {
+            width: 60px;
+            height: 60px;
+         }
+      }
+   }
+
+   /* Apex Pie Chart */
+   #apex_pie-chart {
+      .apexcharts-tooltip.dark {
+         color: $black !important;
+      }
+      .apexcharts-legend-marker {
+         position: relative;
+         top: 1px !important;
+      }
+   }
+
+
+

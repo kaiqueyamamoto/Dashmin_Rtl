@@ -1,0 +1,81 @@
+/* ************************
+09.6: Coming Soon
+********************* */
+
+#DateCountdown {
+    margin: 80px 0;
+    width: 100%;
+    height: 180px;
+    @include tab {
+        height: 150px;
+    }
+
+    @include mobileLg {
+        height: 120px;
+    }
+    @include mobileMd {
+        height: 80px;
+        margin: 50px 0;
+    }
+}
+
+ .time_circles {
+    position: relative;
+    width: 720px;
+    height: 100%;
+    margin: 0 auto;
+
+    @include tab {
+        width: 600px;
+    }
+    @include mobileLg {
+        width: 480px;
+    }
+    
+    @include mobileMd {
+        width: 320px;
+    }
+}
+
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.time_circles > div > h4 {
+    margin: 0;
+    padding: 0;
+    @extend .font-14;
+    @extend .c4;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @include mobileLg {
+        font-size: 10px !important;
+    }
+    @include mobileMd {
+        font-size: 8px !important;
+    }
+}
+
+.time_circles > div > span {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 36px !important;
+    @extend .black;
+    margin-bottom: 2px;
+    @include mobileLg {
+        font-size: 26px !important;
+    }
+    @include mobileMd {
+        font-size: 17px !important;
+    }
+}

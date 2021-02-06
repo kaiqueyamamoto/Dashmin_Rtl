@@ -1,0 +1,94 @@
+/* ************************
+05.3: Product Details
+********************* */
+#gal1 {
+    margin-top: 20px;
+    a {
+        img {
+            width: 75px;
+            height: 67px;
+            margin-right: 10px;
+        }
+    }
+}
+
+/* Product Details */
+.product-details {
+    padding: 30px;
+}
+
+/* Product Details Content*/
+.product-details-content {
+    .product_title {
+        font-size: 20px;
+        @extend .bold;
+        margin-bottom: 13px;
+    }
+    .woocommerce-Price-amount {
+        font-size: 17px;
+        @extend .bold;
+        @extend .c1;
+    }
+    .price {
+        margin-bottom: 30px;
+    }
+    .color-group {
+        margin-bottom: 16px;
+    }
+    .product-review {
+        margin-bottom: 30px;
+    }
+    .woocommerce-product-details__short-description {
+        margin-top: 38px;
+        h5 {
+            @extend .bold;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.733;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.list-heading {
+    min-width: 60px;
+}
+
+/* Color Group */
+.color-group {
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+    .color {
+        @extend .radius;
+        width: 15px;
+        height: 15px;
+        display: block;
+        
+        &.active {
+            width: 25px;
+            height: 25px;
+        }
+        &.color1 {
+            background-color: #2900FF;
+        }
+        &.color2 {
+            background-color: #F59D2A;
+        }
+        &.color3 {
+            background-color: #E72AF5;
+        }
+        &.color4 {
+            background-color: #00FF33;
+        }
+    }
+}

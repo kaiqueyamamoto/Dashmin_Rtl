@@ -1,0 +1,355 @@
+/* ************************
+10.1: Extensions
+********************* */
+
+/* Sweet Alert */
+.s_alert-cat {
+    min-width: 160px;
+}
+
+/* noUi Slider */
+.nouislider-cat {
+    @extend .black;
+    margin: 0;
+    min-width: 320px;
+    @include mobileLg {
+        min-width: 220px;
+        padding-right: 10px;
+    }
+    @include mobileSm {
+        min-width: 100%;
+        padding-right: 0px;
+    }
+}
+
+.s_text {
+    min-width: 90px;
+    display: inline-block;
+}
+
+/* Drag & Drop */
+.dragable-card {
+    padding: 28px 30px 25px;
+    background-color: #ECF3FD;
+    margin-bottom: 30px;
+
+    @include mobileXs {
+        padding: 18px 20px 15px;
+    }
+
+    h4 {
+        color: #4F9DF8;
+    }
+
+    &.dragable-card-yellow {
+        background-color: #FFF4E6;
+        h4 {
+            color: #FFB959;
+        }
+    }
+    &.dragable-card-red {
+        background-color: #FFE2E6;
+        h4 {
+            color: #FC7383;
+        }
+    }
+    &.dragable-card-green {
+        background-color: #DBF7E8;
+        h4 {
+            color: #67CFA2;
+        }
+    }
+}
+
+#dragable-product-list {
+    .product-list-item {
+        background-color: #f0f0f0;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.dragable-team {
+    > div {
+        background-color: #f0f0f0;
+        padding: 10px;
+        &:not(:last-child) {
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.dragable-btn {
+    a {
+        @extend .no-shadow;
+        margin-bottom: 10px;
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include medium {
+                margin-right: 15px;
+            }
+            @include tab {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.dragable-list {
+    > div {
+        border-bottom: 1px solid #F5F5F5;
+        padding: 20px;
+        @extend .black;
+        @extend .white-bg;
+
+        @include mobileSm {
+            padding: 15px 0;
+        }
+
+        svg, i {
+            margin-right: 16px;
+            cursor: all-scroll;
+            min-width: 20px;
+        }
+
+        &.ui-sortable-helper {
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            border-color: transparent;
+
+            svg {
+                path#Path_365 {
+                    fill: $c2;
+                }
+            }
+            i {
+                @extend .c2;
+            }
+        }
+    }
+}
+
+/* Tour */
+.shepherd-element {
+    filter: none;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shepherd-element .shepherd-content {
+    background: #CCF5F8;
+}
+.tippy-popper[x-placement^=bottom] .tippy-arrow {
+    border-bottom-color: #CCF5F8;
+}
+
+.shepherd-element .shepherd-content footer .shepherd-buttons {
+    margin-top: 10px;
+}
+.shepherd-element .shepherd-content footer .shepherd-buttons li .shepherd-button {
+    background:transparent;
+    color: #09D1DE;
+    @extend .font-14;
+    @extend .bold;
+    text-transform: capitalize;
+    padding: 5px 26px;
+    svg, img {
+        position: relative;
+        top: -1px;
+    }
+    &.text-danger {
+        svg, img {
+            top: -2px;
+        }
+    }
+}
+
+.shepherd-element .shepherd-content footer .shepherd-buttons li .shepherd-button:hover {
+    background:transparent;
+}
+
+/* Swiper Slider */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.swiper-multi-row {
+    .swiper-slide {
+        height: calc((100% - 30px) / 2);
+    }
+}
+
+.swiper-pagination-fraction {
+    display: flex;
+    justify-content: center;
+
+    .swiper-pagination-current {
+        display: block;
+    }
+}
+
+.swiper-button-prev.page-prev,
+.swiper-button-next.page-next {
+    margin: 0;
+    height: 14px;
+}
+.swiper-button-prev.page-prev:after,
+.swiper-button-next.page-next:after {
+    font-size: 14px;
+    height: 14px;
+}
+
+.swiper-centered-slide {
+    ~ .swiper-button-prev {
+        left: 0;
+        margin-top: 7px !important;
+    }
+    ~ .swiper-button-next {
+        right: 0;
+        margin-top: 7px !important;
+    }
+    ~ .swiper-button-prev,
+    ~ .swiper-button-next {
+        margin: 0;
+        height: 14px;
+    }
+    ~ .swiper-button-prev:after,
+    ~ .swiper-button-next:after {
+        font-size: 14px;
+        height: 14px;
+    }
+    .topic {
+        height: 130px;
+    }
+}
+
+.swiper-container-horizontal>.swiper-pagination-progressbar {
+    top: auto;
+    bottom: 0;
+    background: #E9E7FF;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #8280FD;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-top {
+    height: 600px;
+    width: 100%;
+    @include mobileLg {
+        height: 400px;
+    }
+    @include mobileMd {
+        height: 250px;
+    }
+}
+
+.gallery-thumbs {
+    height: 80px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 20px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include customMq(0, 1300) {
+        height: 60px;
+    }
+    @include mobileLg {
+        width: 80%;
+        height: 40px;
+    }
+}
+
+.gallery-thumbs .swiper-slide {
+    height: 100%;
+    border: 4px solid #fff;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-multi-row {
+    height: 700px;
+    @include customMq(0, 1500) {
+        height: 380px;
+    }
+}
+
+
+/* Treeview */
+.treeview .list-group-item{cursor:pointer}
+.treeview span.indent{margin-left:10px;margin-right:10px}
+.treeview .node-disabled{color:silver;cursor:not-allowed}
+
+.treeview .list-group-item {
+    border-top: 0px solid;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    padding: 10px 0;
+
+    &:last-child {
+        border-bottom: 0px solid;
+    }
+
+    .badge {
+        display: inline-block;
+        margin-left: 20px;
+        &:before, &:after {
+            top: -1px;
+            position: relative;
+            content: "(";
+        }
+        &:after {
+            content: ")";
+        }
+    }
+}
+
+
+/* Block UI */
+.blockUI.blockOverlay {
+    z-index: 999999 !important;
+}
+.blockUI.blockMsg.blockElement {
+    z-index: 9999991 !important;
+
+    > span, > div {
+        display: block;
+        width: max-content;
+    }
+}
+
+.blockUI.blockMsg.blockPage {
+    z-index: 9999991 !important;
+}
+
+.icon-spin {
+    animation: spin 1s infinite linear;
+    display: inline-block;
+}
+
+/* Change Language */
+.card-localization .card-text {
+    line-height: 1.733;
+}

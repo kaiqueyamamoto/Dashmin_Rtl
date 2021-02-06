@@ -1,0 +1,25 @@
+/* ************************
+08.2: Icons
+********************* */
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    @extend .trans3;
+    cursor: pointer;
+    &:hover {
+        @extend .c2;
+    }
+    i {
+        font-size: 24px;
+    }
+}
+
+.icon__name {
+    @extend .font-12;
+    line-height: 1;
+    margin-left: 14px;
+    position: relative;
+    // top: -5px;
+    text-transform: lowercase;
+}

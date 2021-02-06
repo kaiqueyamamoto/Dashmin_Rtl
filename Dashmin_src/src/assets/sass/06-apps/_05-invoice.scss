@@ -1,0 +1,169 @@
+/* ************************
+   06.5: Invoice 
+   ********************* */
+
+    .invoice-header-left {
+        @extend .mail-header-left;
+
+        .dropdown-button {
+            margin-left: 10px;
+            > a {
+                    @extend .radius-50;
+                    background-color: #F5F5F5;
+                    padding: 10px 20px;
+                    @extend .font-14;
+                    @extend .black;
+                    i {
+                        margin-left: 5px;
+                        position: relative;
+                        top: 2px;
+                    }
+            }
+        }
+    }
+    .invoice-header-right {
+        @extend .mail-header-right;
+    }
+
+    /* Invoice Details */
+    .invoice-details-header {
+        line-height: 1;
+        padding: 15px 22px 15px 30px;
+    }
+
+    .invoice-pd {
+        padding: 50px 60px;
+        @include mobileSm {
+            padding: 30px 20px;
+        }
+    }
+    .invoice-left {
+        .list-invoice {
+            li {
+                color: #E9E7FF;
+                a {
+                    color: #E9E7FF;
+                }
+                &.location {
+                    &:before {
+                        content: url('../../assets/img/svg/location-icon.svg');
+                    }
+                }
+                &.call {
+                    &:before {
+                        content: url('../../assets/img/svg/call-icon.svg');
+                    }
+                }
+            }
+        }
+    }
+    .invoice-right {
+        .status-list {
+            li:not(:last-child) {
+                margin-bottom: 8px;
+            }
+            .key {
+                color: #CAC6FB;
+                min-width: 90px;
+            }
+        }
+    }
+    .status-list {
+        @extend .list-unstyled;
+        li {
+            display: flex;
+        }
+        li:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        span {
+            display: inline-block;
+        }
+        .key {
+            min-width: 100px;
+        }
+    }
+
+    .details-list-wrap {
+        padding: 10px 40px 30px;
+        @include mobileSm {
+            padding: 0 15px 20px;
+        }
+        .invoice-list-table.some-center {
+            th, td {
+                &:not(:nth-child(1)):not(:nth-child(2)) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .list-invoice {
+        @extend .list-unstyled;
+        li {
+            position: relative;
+            padding-left: 30px;
+            a {
+                @extend .text_color;
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            &.location, &.call, &.mail, &.user {
+                &:before {
+                    position: absolute;
+                    content: url('../../assets/img/svg/location-icon1.svg');
+                    left: 0;
+                    top: 2px;
+                }
+            }
+            &.call {
+                &:before {
+                    content: url('../../assets/img/svg/call-icon1.svg');
+                }
+            }
+            &.user {
+                &:before {
+                    content: url('../../assets/img/svg/user-icon.svg');
+                }
+            }
+            &.mail {
+                &:before {
+                    content: url('../../assets/img/svg/mail-icon.svg');
+                }
+            }
+        }
+    }
+
+    .invoice {
+        &.edit {
+            input {
+                max-width: 290px;
+                @extend .text_color;
+            }
+            .list-invoice {
+                li {
+                    &:before {
+                        top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .proceed-to-checkout {
+        &.invoice-edit {
+            @include mobileSm {
+                margin-right: 0px;
+            }
+            .btn {
+                min-width: 140px;
+                &:not(:last-child) {
+                    margin-right: 30px;
+                    @include mobileSm {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
